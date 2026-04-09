@@ -1,0 +1,17 @@
+import { NavLink } from 'react-router-dom';
+import css from './Navigation.module.css';
+
+export default function Navigation() {
+  return (
+    <header className={css.header}>
+      <nav className={css.nav}>
+        <NavLink to="/" className={({ isActive }) => (isActive ? css.active : css.link)}>
+          Ana Sayfa
+        </NavLink>
+        <NavLink to="/movies" className={({ isActive }) => (isActive ? css.active : css.link)}>
+          Filmler
+        </NavLink>
+      </nav>
+    </header>
+  );
+}
